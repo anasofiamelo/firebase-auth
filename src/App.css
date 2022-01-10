@@ -10,23 +10,50 @@ body {
   background: #ECEFF1;
   color: rgba(0,0,0,0.87);
   font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-
+h1 {
+  /* text-align: center; */
+}
 /*
   rever necessarios
 */
-#message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px;}
-#message h1 { font-size: 22px; font-weight: bold; color: #0B0B61; margin: 0 0 16px; text-align: center;}
+#message { 
+  background: white; 
+  max-width: 360px; 
+  margin: 100px auto 16px; 
+  padding: 32px 24px; 
+  border-radius: 3px;
+}
+
+#message h1 { 
+  font-size: 22px; 
+  font-weight: bold; 
+  color: #0B0B61; 
+  margin: 0 0 16px;
+  text-align: center;
+}
 /* #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; text-align: center;} */
 /* #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; } */
 /* #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; } */
-#message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+#message, #message a { 
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12),
+  0 1px 2px rgba(0,0,0,0.24); 
+}
 /* #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; } */
 @media (max-width: 600px) {
-body, #message { margin-top: 0; background: white; box-shadow: none; }
-body { border-top: 16px solid #0B0B61;}
+  body, #message { 
+    margin-top: 0; 
+    background: white; 
+    box-shadow: none; 
+  }
+  body { 
+    border-top: 16px solid #0B0B61;
+  }
 }
-
 
 /*
   TIRANDO A SETA DO INPUT NUMBER
@@ -68,9 +95,29 @@ input[type=number]::-webkit-inner-spin-button,
 }
 
 #firebaseui-auth-container h1 {
-  font-size: 22px; font-weight: bold; color: #0B0B61; margin: 0 0 16px; text-align: center;
+  font-size: 22px; 
+  font-weight: bold; 
+  color: #0B0B61; 
+  margin: 0 0 16px; 
+  text-align: center;
 }
 
+.button-format {
+  margin: 10px;
+  padding: 3px;
+  width: 100px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  background-color: #0B0B61;
+}
+
+.radio-format {
+  width: 15px;
+  padding: 3px;
+  margin: 15px 3px;
+}
+
+/* 
 #firebaseui-auth-container button {
   margin: 8px;
   width: 75px;
@@ -82,7 +129,7 @@ input[type=number]::-webkit-inner-spin-button,
 
 #firebaseui-auth-container button:hover{
   background-color: #08088A;
-}
+} */
 
 #firebaseui-auth-container a {
   font-size: 14px;
@@ -100,21 +147,6 @@ especificaçoes para formulario
   border-radius: 10px;
 }
 
-.radio-format {
-  width: 15px;
-  padding: 3px;
-  margin: 15px 3px;
-}
-
-.button-format {
-  margin: 10px;
-  padding: 3px;
-  width: 100px;
-  border-radius: 10px;
-  color: #FFFFFF;
-  background-color: #0B0B61;
-}
-*/
 
 /*
   tirando setas do type number

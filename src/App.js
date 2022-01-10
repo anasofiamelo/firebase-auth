@@ -1,4 +1,3 @@
-// import { useState, useEffect } from "react";
 import { Home, Login, Register } from './screens/index'
 import './App.css';
 import { UserProvider } from './contexts/user'
@@ -10,17 +9,16 @@ import {
 } from "react-router-dom";
 
 function App() {
-
   return (
-      <UserProvider>
-        <Router>
-          <Routes>
-            <Route path='/' element={<Login/>}></Route>
-            <Route path='/register' element={<Register/>}></Route>
-            <Route path='/home' element={<Home/>}></Route>  
-          </Routes>
-        </Router>
+    <Router> 
+      <UserProvider> {/* arquivo que fica salvo as informações do usuário */}
+        <Routes> {/* engloba todas as rotas */}
+          <Route path='/' element={<Login />} /> {/* cada rota que existe na aplicação */}
+          <Route path='/register' element={<Register />} /> {/* cada rota que existe na aplicação */}
+          <Route path='/home/:uid' element={<Home />} /> {/* cada rota que existe na aplicação */}
+        </Routes>
       </UserProvider>
+    </Router>
   );
 }
 
