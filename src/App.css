@@ -1,38 +1,126 @@
-.App {
+
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Open+Sans:ital,wght@0,300;1,300&family=Rock+3D&family=Shizuru&family=The+Nautigal:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ECEFF1;
+  color: rgba(0,0,0,0.87);
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*
+  rever necessarios
+*/
+#message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px;}
+#message h1 { font-size: 22px; font-weight: bold; color: #0B0B61; margin: 0 0 16px; text-align: center;}
+/* #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; text-align: center;} */
+/* #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; } */
+/* #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; } */
+#message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+/* #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; } */
+@media (max-width: 600px) {
+body, #message { margin-top: 0; background: white; box-shadow: none; }
+body { border-top: 16px solid #0B0B61;}
+}
+
+
+/*
+  TIRANDO A SETA DO INPUT NUMBER
+*/
+
+input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+
+
+#firebaseui-auth-container {
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  color: #0B0B61;
+}
+
+.input-format{
+  margin: 5px;
+  width: 250px;
+  height: 25px;
+  border-radius: 25px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#firebaseui-auth-container p {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0 0 8px;
+  /* text-align: center; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#firebaseui-auth-container span{
+  padding-left: 3px;
+  padding-right: 6px;
+  font-size: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#firebaseui-auth-container h1 {
+  font-size: 22px; font-weight: bold; color: #0B0B61; margin: 0 0 16px; text-align: center;
+}
+
+#firebaseui-auth-container button {
+  margin: 8px;
+  width: 75px;
+  height: 25px;
+  border-radius: 25px; 
+  background-color: #0B0B61;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#firebaseui-auth-container button:hover{
+  background-color: #08088A;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#firebaseui-auth-container a {
+  font-size: 14px;
+  display: block; text-align: center; background: #0B0B61; text-transform: uppercase; text-decoration: none; color: white; padding: 12px; border-radius: 4px;
 }
+
+/*
+especificaçoes para formulario
+.input-format {
+  margin: 5px;
+  padding: 3px;
+  text-align: center;
+  width: 300px;
+  height: 25px;
+  border-radius: 10px;
+}
+
+.radio-format {
+  width: 15px;
+  padding: 3px;
+  margin: 15px 3px;
+}
+
+.button-format {
+  margin: 10px;
+  padding: 3px;
+  width: 100px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  background-color: #0B0B61;
+}
+*/
+
+/*
+  tirando setas do type number
+  input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+*/
