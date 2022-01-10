@@ -1,44 +1,19 @@
 import React, { useState } from "react"
-
-import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
-import { db } from '../firebase-config'
-import { auth } from '../firebase-config'
-import { collection, doc, setDoc } from "firebase/firestore";
+//context import
+import { useUser } from '../contexts/user'
 
 function Register(){
 
-    const [user, setUser] = useState({});
-    
-    const [registerName, setRegisterName] = useState("");
-    const [registerEmail, setRegisterEmail] = useState("");
-    const [registerPassword, setRegisterPassword] = useState("");
-    const [registerAge, setRegisterAge] = useState("");
-    const [registerGender, setRegisterGender] = useState("");
+  const [registerName, setRegisterName] = useState("");
+  const [registerEmail, setRegisterEmail] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
+  const [registerAge, setRegisterAge] = useState("");
+  const [registerGender, setRegisterGender] = useState("");
 
-    const usersCollection = collection(db, "users");
-  
-    onAuthStateChanged(auth, (currentUser) =>{
-      setUser(currentUser);
-    })
+    const context = useUser()
   
     const registerUser = async () => {
-      try {
-        const user = await createUserWithEmailAndPassword(
-          auth, 
-          registerEmail, 
-          registerPassword);
-          console.log(user.user);
-
-          await setDoc(doc(db, "users", user.user.uid), { 
-            name: registerName, 
-            email: registerEmail, 
-            age: registerAge, 
-            gender: registerGender
-          });
-
-      } catch (error) {
-        console.log(error.message);
-      }
+      context.registerUser(registerName, registerEmail, registerPassword, registerAge, registerGender)
     };
   
     const HandleChange = (event) => {
